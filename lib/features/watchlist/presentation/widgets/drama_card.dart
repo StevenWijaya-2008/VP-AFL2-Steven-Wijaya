@@ -20,6 +20,8 @@ class DramaCard extends StatelessWidget {
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         title: Text(
           drama.title,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
           style: theme.textTheme.titleMedium?.copyWith(
             fontWeight: FontWeight.bold,
             color: theme.colorScheme.onSurface,
@@ -27,6 +29,8 @@ class DramaCard extends StatelessWidget {
         ),
         subtitle: Text(
           '${drama.genre} • Ep ${drama.watchedEpisodes}/${drama.totalEpisodes}',
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: theme.textTheme.bodyMedium?.copyWith(
             color: theme.colorScheme.onSurfaceVariant,
           ),

@@ -53,31 +53,76 @@ class _WatchlistScreenState extends State<WatchlistScreen> {
 
     return Scaffold(
       appBar: AppBar(title: const Text('Drama Vault')),
-      body: Column(
-        children: [
-          const WatchlistHeader(),
-          WatchlistSearch(
-            controller: _searchController,
-            query: _query,
-            onChanged: (value) => setState(() => _query = value),
-            onClear: _clearSearch,
-          ),
-          Expanded(
-            child: visibleDramas.isEmpty
-                ? EmptyWatchlist(query: _query, onClear: _clearSearch)
-                : ListView.builder(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              itemCount: visibleDramas.length,
-              itemBuilder: (context, index) {
-                final drama = visibleDramas[index];
-                return DramaCard(
-                  drama: drama,
-                  onAddEpisode: () => _incrementEpisode(drama.id),
-                );
-              },
-            ),
-          ),
-        ],
+      body: SafeArea(
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final isTablet = constraints.maxWidth >= 600;
+
+            return CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(
+                  child: Column(
+                    children: [
+                      const WatchlistHeader(),
+                      WatchlistSearch(
+                        controller: _searchController,
+                        query: _query,
+                        onChanged: (value) => setState(() => _query = value),
+                        onClear: _clearSearch,
+                      ),
+                    ],
+                  ),
+                ),
+                if (visibleDramas.isEmpty)
+                  SliverFillRemaining(
+                    hasScrollBody: false,
+                    child: EmptyWatchlist(
+                      query: _query,
+                      onClear: _clearSearch,
+                    ),
+                  )
+                else if (isTablet)
+                  SliverPadding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    sliver: SliverGrid(
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        mainAxisSpacing: 8,
+                        crossAxisSpacing: 8,
+                        childAspectRatio: 3.0,
+                      ),
+                      delegate: SliverChildBuilderDelegate(
+                            (context, index) {
+                          final drama = visibleDramas[index];
+                          return DramaCard(
+                            drama: drama,
+                            onAddEpisode: () => _incrementEpisode(drama.id),
+                          );
+                        },
+                        childCount: visibleDramas.length,
+                      ),
+                    ),
+                  )
+                else
+                  SliverPadding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    sliver: SliverList(
+                      delegate: SliverChildBuilderDelegate(
+                            (context, index) {
+                          final drama = visibleDramas[index];
+                          return DramaCard(
+                            drama: drama,
+                            onAddEpisode: () => _incrementEpisode(drama.id),
+                          );
+                        },
+                        childCount: visibleDramas.length,
+                      ),
+                    ),
+                  ),
+              ],
+            );
+          },
+        ),
       ),
     );
   }

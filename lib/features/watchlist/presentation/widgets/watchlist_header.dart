@@ -16,6 +16,8 @@ class WatchlistHeader extends StatelessWidget {
         children: [
           Text(
             'My Watchlist',
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: theme.textTheme.headlineMedium?.copyWith(
               color: theme.colorScheme.onPrimaryContainer,
               fontWeight: FontWeight.bold,
@@ -24,6 +26,8 @@ class WatchlistHeader extends StatelessWidget {
           const SizedBox(height: 4),
           Text(
             'Track your Kdrama progress here.',
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: theme.textTheme.bodyMedium?.copyWith(
               color: theme.colorScheme.onPrimaryContainer.withOpacity(0.8),
             ),
