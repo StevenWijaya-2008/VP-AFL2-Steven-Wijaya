@@ -113,4 +113,4 @@ Arsitektur CustomScrollView pada kode final otomatis menyesuaikan susutan viewpo
 | :--- | :--- | :--- |
 | **DramaCard** | *Unbounded Horizontal Width* | `maxLines: 2` & `overflow: TextOverflow.ellipsis` |
 | **WatchlistHeader** | *Unbounded Vertical Height* | `CustomScrollView` + `SliverToBoxAdapter` |
-| **WatchlistSearch** | *Reduced Viewport (Keyboard)* | `AlwaysScrollableScrollPhysics()` |
+| **WatchlistSearch** | *Reduced Viewport (Keyboard)* | `CustomScrollView` |
