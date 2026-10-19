@@ -37,9 +37,9 @@ Aplikasi manajemen dan pelacak drama Asia (K-Drama & C-Drama) berbasis Flutter y
 
 ## Tangkapan Layar Aplikasi
 
-| Layar Eksplorasi (`HomeScreen`) | Layar Detail (`DramaDetailScreen`) | Layar Watchlist (`WatchlistScreen`) |
-| :---: | :---: | :---: |
-| <img src="docs/screenshots/home.png" width="220" alt="Home Screen"> | <img src="docs/screenshots/detail.png" width="220" alt="Detail Screen"> | <img src="docs/screenshots/watchlist.png" width="220" alt="Watchlist Screen"> |
+|                      Layar Eksplorasi (`HomeScreen`)                       |                       Layar Detail (`DramaDetailScreen`)                       |                         Layar Watchlist (`WatchlistScreen`)                          |
+|:--------------------------------------------------------------------------:|:------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------:|
+| <img src="docs/week05/screenshots/home.png" width="220" alt="Home Screen"> | <img src="docs/week05/screenshots/detail.png" width="220" alt="Detail Screen"> | <img src="docs/week05/screenshots/watchlist.png" width="220" alt="Watchlist Screen"> |
 
 ---
 
@@ -69,6 +69,10 @@ Aplikasi manajemen dan pelacak drama Asia (K-Drama & C-Drama) berbasis Flutter y
     ```bash
     flutter run
     ```
+
+## Unduh Release APK
+
+* 📥 **[Unduh Drama Vault v1.0.0 APK](https://github.com/StevenWijaya-2008/VP-LabActivityW1-Steven-Wijaya/releases/download/v1.0.0/app-release.apk)**
 
 ## Dokumentasi Terkait
 - Penjelasan Struktur Arsitektur: docs/structure.md
