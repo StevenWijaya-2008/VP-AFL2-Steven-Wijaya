@@ -37,9 +37,9 @@ Aplikasi manajemen dan pelacak drama Asia (K-Drama & C-Drama) berbasis Flutter y
 
 ## Tangkapan Layar Aplikasi
 
-|                      Layar Eksplorasi (`HomeScreen`)                       |                       Layar Detail (`DramaDetailScreen`)                       |                         Layar Watchlist (`WatchlistScreen`)                          |
-|:--------------------------------------------------------------------------:|:------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------:|
-| <img src="docs/week05/screenshots/home.png" width="220" alt="Home Screen"> | <img src="docs/week05/screenshots/detail.png" width="220" alt="Detail Screen"> | <img src="docs/week05/screenshots/watchlist.png" width="220" alt="Watchlist Screen"> |
+|                      Layar Eksplorasi (`HomeScreen`)                      |                      Layar Detail (`DramaDetailScreen`)                       |                         Layar Watchlist (`WatchlistScreen`)                         |
+|:-------------------------------------------------------------------------:|:-----------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------:|
+| <img src="docs/week05/screenshot/home.png" width="220" alt="Home Screen"> | <img src="docs/week05/screenshot/detail.png" width="220" alt="Detail Screen"> | <img src="docs/week05/screenshot/watchlist.png" width="220" alt="Watchlist Screen"> |
 
 ---
 
