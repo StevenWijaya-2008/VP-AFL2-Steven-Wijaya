@@ -25,11 +25,11 @@ class WatchlistHeader extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            'Track your Kdrama progress here.',
+            'Track your viewing progress and active series.',
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: theme.textTheme.bodyMedium?.copyWith(
-              color: theme.colorScheme.onPrimaryContainer.withOpacity(0.8),
+              color: theme.colorScheme.onPrimaryContainer.withValues(alpha: 0.8),
             ),
           ),
         ],

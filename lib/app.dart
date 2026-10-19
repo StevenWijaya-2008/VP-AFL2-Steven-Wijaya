@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:warung_digital/features/watchlist/presentation/screens/main_navigation_screen.dart';
 import 'core/theme/app_theme.dart';
-import 'features/watchlist/presentation/watchlist_screen.dart';
 
 class WarungApp extends StatelessWidget {
   const WarungApp({super.key});
@@ -13,7 +13,7 @@ class WarungApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: const WatchlistScreen(),
+      home: const MainNavigationScreen(),
     );
   }
 }

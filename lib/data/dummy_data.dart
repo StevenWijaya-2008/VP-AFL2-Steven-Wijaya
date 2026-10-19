@@ -1,0 +1,41 @@
+import '../features/watchlist/domain/drama_model.dart';
+
+final List<Drama> dummyDramas = [
+  const Drama(
+    id: 'd1',
+    title: 'Crash Landing on You',
+    genre: 'Romance',
+    totalEpisodes: 16,
+    watchedEpisodes: 0,
+    rating: 4.9,
+    origin: 'K-Drama',
+    synopsis: 'A South Korean heiress accidentally paraglides into North Korea.',
+    tags: ['Romance', 'Military', 'Comedy'],
+    imageUrl: 'https://picsum.photos/200/300?random=1',
+    isBookmarked: true,
+  ),
+  const Drama(
+    id: 'd2',
+    title: 'Alchemy of Souls',
+    genre: 'Fantasy',
+    totalEpisodes: 30,
+    watchedEpisodes: 0,
+    rating: 4.8,
+    origin: 'K-Drama',
+    synopsis: 'A powerful sorceress trapped in a blind woman\'s body encounters a noble man.',
+    tags: ['Fantasy', 'Magic', 'Romance'],
+    imageUrl: 'https://picsum.photos/200/300?random=2',
+  ),
+  const Drama(
+    id: 'd3',
+    title: 'Hidden Love',
+    genre: 'Romance',
+    totalEpisodes: 25,
+    watchedEpisodes: 0,
+    rating: 4.7,
+    origin: 'C-Drama',
+    synopsis: 'Sang Zhi falls in love with her older brother\'s friend Duan Jiaxu.',
+    tags: ['Romance', 'Youth', 'School'],
+    imageUrl: 'https://picsum.photos/200/300?random=3',
+  ),
+];
