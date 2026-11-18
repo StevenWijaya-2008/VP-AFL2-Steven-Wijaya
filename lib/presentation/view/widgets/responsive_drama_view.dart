@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
-import '../../domain/drama_model.dart';
-import '../screens/drama_detail_screen.dart';
+import '../../../domain/entities/drama.dart';
 import 'drama_card.dart';
 
 class ResponsiveDramaView extends StatelessWidget {
   final List<Drama> dramas;
-  final Function(String) onToggleBookmark;
+  final ValueChanged<String> onToggleBookmark;
+  final ValueChanged<Drama> onDramaTap;
 
   const ResponsiveDramaView({
     super.key,
     required this.dramas,
     required this.onToggleBookmark,
+    required this.onDramaTap,
   });
-
-  void _navigateToDetail(BuildContext context, Drama drama) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (_) => DramaDetailScreen(drama: drama)),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +54,7 @@ class ResponsiveDramaView extends StatelessWidget {
   Widget _buildCard(BuildContext context, Drama drama, ThemeData theme) {
     return DramaCard(
       drama: drama,
-      onTap: () => _navigateToDetail(context, drama),
+      onTap: () => onDramaTap(drama),
       trailingAction: IconButton(
         icon: Icon(
           drama.isBookmarked ? Icons.bookmark : Icons.bookmark_outline,

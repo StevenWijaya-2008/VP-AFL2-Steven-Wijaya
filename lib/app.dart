@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:warung_digital/features/watchlist/presentation/screens/main_navigation_screen.dart';
 import 'core/theme/app_theme.dart';
+import 'domain/entities/drama.dart';
+import 'presentation/viewmodels/explore/explore_view_model.dart';
+import 'presentation/viewmodels/watchlist/watchlist_view_model.dart';
+import 'presentation/view/screens/main_navigation_screen.dart';
 
 class WarungApp extends StatelessWidget {
-  const WarungApp({super.key});
+  final ExploreViewModel exploreViewModel;
+  final WatchlistViewModel watchlistViewModel;
+  final Widget Function(Drama drama) buildDetailScreen;
+
+  const WarungApp({
+    super.key,
+    required this.exploreViewModel,
+    required this.watchlistViewModel,
+    required this.buildDetailScreen,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +25,11 @@ class WarungApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: const MainNavigationScreen(),
+      home: MainNavigationScreen(
+        exploreViewModel: exploreViewModel,
+        watchlistViewModel: watchlistViewModel,
+        buildDetailScreen: buildDetailScreen,
+      ),
     );
   }
 }

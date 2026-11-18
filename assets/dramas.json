@@ -1,0 +1,54 @@
+[
+  {
+    "id": "DRM-001",
+    "title": "Moving",
+    "genre": "Action, Sci-Fi",
+    "totalEpisodes": 20,
+    "watchedEpisodes": 0,
+    "rating": 9.1,
+    "origin": "K-Drama",
+    "synopsis": "Tiga remaja mewarisi kekuatan super rahasia dari orang tua mereka yang merupakan mantan agen intelijen.",
+    "tags": ["Superpower", "Family", "Thriller"],
+    "imageUrl": "",
+    "isBookmarked": false
+  },
+  {
+    "id": "DRM-002",
+    "title": "Hidden Love",
+    "genre": "Romance, Youth",
+    "totalEpisodes": 25,
+    "watchedEpisodes": 25,
+    "rating": 8.9,
+    "origin": "C-Drama",
+    "synopsis": "Sang Zhi diam-diam menyukai teman kakaknya sejak SMA hingga kembali bertemu saat dewasa.",
+    "tags": ["First Love", "Campus", "Healing"],
+    "imageUrl": "",
+    "isBookmarked": true
+  },
+  {
+    "id": "DRM-003",
+    "title": "First Love",
+    "genre": "Romance, Drama",
+    "totalEpisodes": 9,
+    "watchedEpisodes": 4,
+    "rating": 8.6,
+    "origin": "J-Drama",
+    "synopsis": "Kisah cinta dua anak muda di Hokkaido yang terpisah takdir selama dua dekade.",
+    "tags": ["Nostalgia", "Melodrama", "Music"],
+    "imageUrl": "",
+    "isBookmarked": true
+  },
+  {
+    "id": "DRM-004",
+    "title": "Lovely Runner",
+    "genre": "Romance, Fantasy",
+    "totalEpisodes": 16,
+    "watchedEpisodes": 0,
+    "rating": 9.0,
+    "origin": "K-Drama",
+    "synopsis": "Seorang penggemar melintasi waktu kembali ke masa SMA demi menyelamatkan idola favoritnya.",
+    "tags": ["Time Travel", "Idol", "Comedy"],
+    "imageUrl": "",
+    "isBookmarked": false
+  }
+]

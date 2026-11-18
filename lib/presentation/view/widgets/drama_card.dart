@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../domain/drama_model.dart';
+import '../../../domain/entities/drama.dart';
 
 class DramaCard extends StatelessWidget {
   final Drama drama;

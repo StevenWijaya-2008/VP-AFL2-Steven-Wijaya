@@ -1,4 +1,6 @@
-class Drama {
+import 'package:equatable/equatable.dart';
+
+class Drama extends Equatable {
   final String id;
   final String title;
   final String genre;
@@ -52,4 +54,19 @@ class Drama {
       isBookmarked: isBookmarked ?? this.isBookmarked,
     );
   }
+
+  @override
+  List<Object?> get props => [
+    id,
+    title,
+    genre,
+    totalEpisodes,
+    watchedEpisodes,
+    rating,
+    origin,
+    synopsis,
+    tags,
+    imageUrl,
+    isBookmarked,
+  ];
 }
